@@ -34,28 +34,26 @@ client.on('message', async msg => {
         var r = Math.floor(Math.random()*status.length);
         msg.reply(status[r]);
     }else if(command == "help"){
-
-
         // inside a command, event listener, etc.
         const exampleEmbed = new Discord.MessageEmbed()
-            .setColor('#0099ff')
-            .setTitle('Some title')
-            .setURL('https://discord.js.org/')
-            .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
-            .setDescription('Some description here')
-            .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+            .setColor('#00ff00')
+            .setTitle('Commands Database')
+            .setAuthor('Wilson help', 'https://zeparadox.com/images/apps.png', 'https://zeparadox.com')
+            .setDescription('All the commands wilson can do.')
+            .setThumbnail('https://zeparadox.com/images/apps.png')
             .addFields(
-                { name: 'Regular field title', value: 'Some value here' },
-                { name: '\u200B', value: '\u200B' },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
-                { name: 'Inline field title', value: 'Some value here', inline: true },
+                { name: 'rank', value: 'gets your highest rank.', inline: true},
+                { name: 'time', value: 'tells you wilsons time.', inline: true},
+                { name: 'status', value: 'what is wilson doing?', inline: true },
+                { name: 'help', value: 'shows you this message.', inline: true },
+                { name: 'unknown command', value: 'if you give him an unknown command he will just say something.', inline: true },
             )
-            .addField('Inline field title', 'Some value here', true)
-            .setImage('https://i.imgur.com/wSTFkRM.png')
-            .setTimestamp()
-            .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
-
+            .setFooter('Updated: 11/22/2020', 'https://zeparadox.com/images/apps.png');
         msg.reply(exampleEmbed);
+    }else if(command == "log"){
+
+
+
     }else{
         var sorrys = [
             "Sorry I don't understand.",

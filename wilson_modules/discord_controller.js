@@ -11,7 +11,7 @@ fs.readFile(location, 'utf8', function(err, data) {
 client.on('ready', () => {
   Log(1, `Logged in to discord.` + `\n> Tag: ${client.user.tag}`.rainbow);
 
-  SetPresence("Hacking Pentagon", "dnd");
+  SetPresence("💙 I do good?", "online");
 });
 
 client.on('error', (error) => {
