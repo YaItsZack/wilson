@@ -10,7 +10,7 @@ var brain = require('brain.js');
 global.net = new brain.recurrent.LSTM();
 
 var training = {
-    iterations: 1000, // 500
+    iterations: 100, // 500
     log: (data)=>{
       Log(3, `${data}`);
     }
@@ -29,7 +29,8 @@ var data = [
     { input: 'wilson help', output: 'help'},
     { input: 'help me', output: 'help'},
     { input: 'commands', output: 'help'},
-    { input: '?', output: 'help'}
+    { input: '?', output: 'help'},
+    { input: 'wilson', output: 'react'}
 ];
 
 Log(3, `Starting AI.`);
