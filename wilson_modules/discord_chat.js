@@ -20,8 +20,8 @@ client.on('message', msg => {
     if(b.length >= 1){
         if(b[0].toLowerCase() == "wilson"){
             if(b.length >= 2){
-                if(b[1].toLowerCase() == "help"){
-                    msg.channel.send(`Sorry, ${username} there is no help at the moment.`);
+                if(b[1].toLowerCase() == "dogshit"){
+
                 }else if(b[1].toLowerCase() == "msg"){
                     if(b.length >= 3){
                         var c = b[2];

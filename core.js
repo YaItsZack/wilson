@@ -32,3 +32,6 @@ Log(0, "Internal Commands loaded.");
 
 require('./wilson_modules/io.js');
 Log(0, "Socket IO loaded.");
+
+require('./wilson_modules/discord_commands.js');
+Log(0, "Loaded discord commands.");

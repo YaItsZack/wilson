@@ -27,6 +27,7 @@ var data = [
     { input: 'what are you doing', output: 'status'},
     { input: 'status', output: 'status'},
     { input: 'wilson help', output: 'help'},
+    { input: 'help', output: 'help'},
     { input: 'help me', output: 'help'},
     { input: 'commands', output: 'help'},
     { input: '?', output: 'help'},
