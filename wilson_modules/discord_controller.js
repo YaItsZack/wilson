@@ -1,7 +1,12 @@
 const Discord = require('discord.js');
 global.client = new Discord.Client();
 
-client.login('NjI5OTM5NzMyNTM2ODg1MjU5.XZhDFw.WOyNFf95uEhMOAzGN1PMrP_ylDU');
+const fs = require('fs');
+var location = "S:\\zeparadox\\discord\\wilson_key.txt";
+fs.readFile(location, 'utf8', function(err, data) {
+    if (err) throw err;
+    client.login(data);
+});
 
 client.on('ready', () => {
   Log(1, `Logged in to discord.` + `\n> Tag: ${client.user.tag}`.rainbow);

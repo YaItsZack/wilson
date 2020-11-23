@@ -32,5 +32,3 @@ Log(0, "Internal Commands loaded.");
 
 require('./wilson_modules/io.js');
 Log(0, "Socket IO loaded.");
-
-console.log("Change?.");
