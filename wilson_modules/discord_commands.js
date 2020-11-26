@@ -7,7 +7,7 @@ client.on('message', async msg => {
     if(msgChannel != wilsonChannel){
         return;
     }
-    var command = net.run(msg.content);
+    var command = net.run(msg.content.toLowerCase());
     if(command == "rank"){
         var userId = msg.author.id;
         var guild = msg.guild;
@@ -52,7 +52,19 @@ client.on('message', async msg => {
         msg.reply(exampleEmbed);
     }else if(command == "report"){
 
-        msg.reply(`Current cpu usage: \`${await usage()}\``);
+        var report = await Report();
+        const exampleEmbed = new Discord.MessageEmbed()
+            .setColor('#ff0000')
+            .setTitle('Server Report')
+            .setAuthor('Wilson server', 'https://zeparadox.com/images/admin.png', 'https://zeparadox.com')
+            .setDescription('The server report sir.')
+            .setThumbnail('https://zeparadox.com/images/admin.png')
+            .addFields(
+                { name: 'Processors', value: `${report.count}`, inline: true},
+                { name: 'Usages', value: `${report.usage}%`, inline: true},
+            )
+            .setFooter('Live', 'https://zeparadox.com/images/admin.png');
+        msg.reply(exampleEmbed);
 
     }else{
         var sorrys = [

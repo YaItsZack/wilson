@@ -2,9 +2,17 @@ var osu = require('async-os-utils');
 var cpu = osu.cpu;
 var netstat = osu.netstat;
 
-global.GetCpuCount = ()=>{
+count = ()=>{
     return cpu.count();
 }
-global.usage = async ()=>{
+usage = async ()=>{
     return await cpu.usage();
+}
+
+global.Report = async () => {
+    var a = {
+        "count":`${count()}`,
+        "usage":`${await usage()}`
+    }
+    return a;
 }

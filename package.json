@@ -20,7 +20,6 @@
     "console-title": "^1.1.0",
     "discord.js": "^12.4.0",
     "fs": "0.0.1-security",
-    "greenlock-express": "^4.0.3",
     "greenlock-store-fs": "^3.2.2",
     "https": "^1.0.0",
     "moment": "^2.29.1",

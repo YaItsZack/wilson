@@ -25,14 +25,14 @@ var data = [
     { input: 'whatcha up to', output: 'status'},
     { input: 'watcha doing', output: 'status'},
     { input: 'status report', output: 'report'},
+    { input: 'status', output: 'report'},
     { input: 'what are you doing', output: 'status'},
-    { input: 'status', output: 'status'},
     { input: 'wilson help', output: 'help'},
     { input: 'help', output: 'help'},
     { input: 'help me', output: 'help'},
     { input: 'commands', output: 'help'},
     { input: '?', output: 'help'},
-    { input: 'wilson', output: 'react'}
+    { input: 'wilson', output: 'react'},
 ];
 
 Log(3, `Starting AI.`);
