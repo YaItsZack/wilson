@@ -2,6 +2,7 @@ global.colors = require('colors');
 global.moment = require('moment');
 var columnify = require('columnify');
 var setTitle = require('console-title');
+const { Socket } = require('socket.io');
 
 setTitle('Wilson');
 
@@ -44,4 +45,9 @@ global.Log = function(code, output){
         //columnSplitter: '| '.gray
     };
     console.log(columnify(data, options));
+    try{
+        io.emit("log", output);
+    }catch(err){
+        //
+    }
 }
