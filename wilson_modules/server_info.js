@@ -5,5 +5,6 @@ var netstat = osu.netstat;
 global.GetCpuCount = ()=>{
     return cpu.count();
 }
-
-Log(2, `Cores: ${GetCpuCount()}`);
+global.usage = async ()=>{
+    return await cpu.usage();
+}

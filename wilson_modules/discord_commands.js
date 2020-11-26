@@ -50,9 +50,9 @@ client.on('message', async msg => {
             )
             .setFooter('Updated: 11/22/2020', 'https://zeparadox.com/images/apps.png');
         msg.reply(exampleEmbed);
-    }else if(command == "log"){
+    }else if(command == "report"){
 
-
+        msg.reply(`Current cpu usage: \`${await usage()}\``);
 
     }else{
         var sorrys = [
@@ -72,3 +72,4 @@ client.on('message', async msg => {
         msg.reply(sorrys[r]);
     }
 });
+

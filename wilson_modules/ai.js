@@ -24,6 +24,7 @@ var data = [
     { input: 'hows it going', output: 'status'},
     { input: 'whatcha up to', output: 'status'},
     { input: 'watcha doing', output: 'status'},
+    { input: 'status report', output: 'report'},
     { input: 'what are you doing', output: 'status'},
     { input: 'status', output: 'status'},
     { input: 'wilson help', output: 'help'},
