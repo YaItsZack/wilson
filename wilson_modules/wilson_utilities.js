@@ -19,6 +19,9 @@ global.Log = function(code, output){
     if(code == 3){
         name = `AI`.america
     }
+    if(code == 4){
+        name = `IO`.gray
+    }
     var tag = name;
     var out = `${output}`.white;
     var time = moment().format('hh:mm a');

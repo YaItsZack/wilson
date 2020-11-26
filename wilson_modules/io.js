@@ -1,11 +1,13 @@
-const fs = require('fs');
-const server = require('https').createServer({
-  key: fs.readFileSync('./cert/privkey.pem'),
-  cert: fs.readFileSync('./cert/cert.pem')
+//
+// This runs local only.
+// Cannot figure out the cert.
+//
+
+Log(4, "Loading io..");
+const io = require('socket.io')({
+  serveClient: false,
 });
-const options = { /* ... */ };
-const io = require('socket.io')(server, options);
-
-io.on('connection', socket => { console.log(`CONNECTION IO`); });
-
+const server = require('http').createServer();
+Log(4, "io server using http.");
 server.listen(3000);
+Log(4, "io listening on 3000.");
